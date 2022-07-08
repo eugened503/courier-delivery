@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Header />
-    <!-- <Banner />
-    <Description />
+    <Banner />
+    <!-- <Description />
     <Community />
     <Footer /> -->
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
-//import Banner from "@/components/Banner.vue";
+import Banner from "@/components/Banner.vue";
 //import Description from "@/components/Description.vue";
 //import Community from "@/components/Community.vue";
 //import Footer from "@/components/Footer.vue";
@@ -18,6 +18,6 @@ import Header from "@/components/Header.vue";
 export default {
   name: "HomeView",
   //components: { Header, Banner, Description, Community, Footer },
-  components: { Header },
+  components: { Header, Banner },
 };
 </script>
