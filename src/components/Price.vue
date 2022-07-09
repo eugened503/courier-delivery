@@ -140,7 +140,6 @@ export default {
     &__cell {
       width: 129px;
       padding: 22px 0;
-      //padding: 22px 45px;
       text-align: center;
       border: 1px solid $color-white;
       background: $color-purple;
@@ -181,56 +180,5 @@ export default {
       border-bottom: 1px solid $color-purple;
     }
   }
-
-  // table {
-  //   border-collapse: collapse;
-  //   border-radius: 38px;
-  //   display: block;
-  //   overflow: hidden;
-  //   border: 1px solid $color-white;
-  //   thead tr {
-  //     .table__head-cell {
-  //       //border-top-color: $color-white;
-  //     }
-  //   }
-
-  //   tbody tr:first-child {
-  //     .table__body-cell:first-child {
-  //       background: $color-purple;
-  //       border: 1px solid $color-white;
-  //     }
-  //   }
-
-  //   tbody tr:last-child {
-  //     .table__body-cell:first-child {
-  //       border-bottom-color: $color-white;
-  //     }
-  //   }
-  // }
-
-  // &__head-cell {
-  //   padding: 22px 45px;
-  //   text-align: center;
-  //   background: $color-white;
-  //   border: 1px solid $color-purple;
-
-  //   &:first-child {
-  //     text-align: left;
-  //     background: $color-purple;
-  //     border: 1px solid $color-white;
-  //   }
-  // }
-
-  // &__body-cell {
-  //   padding: 22px 45px;
-  //   text-align: center;
-  //   border: 1px solid $color-white;
-
-  //   &:first-child {
-  //     text-align: left;
-  //     background: $color-white;
-  //     border-bottom-color: $color-purple;
-  //   }
-  // }
 }
 </style>
