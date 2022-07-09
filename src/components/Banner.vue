@@ -50,7 +50,7 @@ export default {
   min-height: 761px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   background-image: url("../assets/images/bg.svg");
 
   &__subtitle {
