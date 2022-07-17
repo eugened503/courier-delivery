@@ -8,7 +8,7 @@
     <Status />
     <About />
     <Application />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ import Money from "@/components/Money.vue";
 import Status from "@/components/Status.vue";
 import About from "@/components/About.vue";
 import Application from "@/components/Application.vue";
-//import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "HomeView",
@@ -34,6 +34,7 @@ export default {
     Status,
     About,
     Application,
+    Footer,
   },
 };
 </script>

@@ -12,19 +12,19 @@
       <img src="../assets/images/logo.svg" alt="logo" />
     </a>
 
-    <div class="header__contacts">
-      <div class="header__connection">
+    <div class="contacts">
+      <div class="contacts__connection">
         <a href="tel:+7 499 408 47 70">+7 499 408 47 70</a>
         <span class="header__connection-item">ежедневно с 08:00 до 20:00</span>
       </div>
-      <div class="header__messengers">
-        <ul class="header__list">
-          <li class="header__list-item">
+      <div class="contacts__messengers">
+        <ul class="contacts__list">
+          <li class="contacts__list-item">
             <a href="https://wa.me/74994084770" target="_blank">
               <img src="../assets/images/wa.svg" alt="wa-logo" />
             </a>
           </li>
-          <li class="header__list-item">
+          <li class="contacts__list-item">
             <a href="https://t.me/dostaver" target="_blank">
               <img src="../assets/images/tg.svg" alt="tg-logo" />
             </a>
