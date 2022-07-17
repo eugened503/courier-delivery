@@ -6,6 +6,7 @@
     <Organization />
     <Money />
     <Status />
+    <About />
     <!-- <Footer /> -->
   </div>
 </template>
@@ -17,10 +18,11 @@ import Price from "@/components/Price.vue";
 import Organization from "@/components/Organization.vue";
 import Money from "@/components/Money.vue";
 import Status from "@/components/Status.vue";
+import About from "@/components/About.vue";
 //import Footer from "@/components/Footer.vue";
 
 export default {
   name: "HomeView",
-  components: { Header, Banner, Price, Organization, Money, Status },
+  components: { Header, Banner, Price, Organization, Money, Status, About },
 };
 </script>
