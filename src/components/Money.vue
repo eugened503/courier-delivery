@@ -12,22 +12,22 @@
         Ваши клиенты могут по факту оплачивать заказ картой <br />
         и получать бумажный кассовый чек.
       </p>
-      <form class="money__form" action="">
-        <div class="money__row">
+      <form class="form" action="">
+        <div class="form__row">
           <input
             type="text"
-            class="money__input"
+            class="form__input"
             placeholder="Введите номер телефона"
           />
-          <button type="submit" class="money__button">
+          <button type="submit" class="form__button">
             ОБСУДИТЬ СОТРУДНИЧЕСТВО
           </button>
         </div>
-        <label class="money__label">
-          <input class="money__checkbox" type="checkbox" checked="checked" />
-          <span class="money__privacy">
+        <label class="form__label">
+          <input class="form__checkbox" type="checkbox" checked="checked" />
+          <span class="form__privacy">
             Я согласен с
-            <a class="money__дштл" href="/privacy-policy/">
+            <a class="form__policy" href="/privacy-policy/">
               политикой конфиденциальности
             </a>
           </span>
