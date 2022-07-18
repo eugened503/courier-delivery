@@ -10,42 +10,26 @@
     <div class="footer-links">
       <ul class="footer-links__list">
         <li class="footer-links__item">
-          <a href="/rules/" class="footer-links__link">Полные правила</a>
+          <a href="/rules/" class="footer-links__link"
+            >Политика конфиденциальности</a
+          >
         </li>
         <li class="footer-links__item">
           <a href="/privacy-policy/" class="footer-links__link">
-            Политика конфиденциальности
+            Полные правила
           </a>
         </li>
       </ul>
     </div>
-
-    <div class="contacts">
-      <div class="contacts__connection">
-        <a href="tel:+7 499 408 47 70">+7 499 408 47 70</a>
-        <span class="header__connection-item">ежедневно с 08:00 до 20:00</span>
-      </div>
-      <div class="contacts__messengers">
-        <ul class="contacts__list">
-          <li class="contacts__list-item">
-            <a href="https://wa.me/74994084770" target="_blank">
-              <img src="../assets/images/wa.svg" alt="wa-logo" />
-            </a>
-          </li>
-          <li class="contacts__list-item">
-            <a href="https://t.me/dostaver" target="_blank">
-              <img src="../assets/images/tg.svg" alt="tg-logo" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Contacts />
   </footer>
 </template>
 
 <script>
+import Contacts from "@/components/Contacts.vue";
 export default {
   name: "FooterView",
+  components: { Contacts },
 };
 </script>
 

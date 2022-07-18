@@ -11,7 +11,8 @@
   background: $color-purple;
   color: $color-white;
   max-width: 1920px;
-  min-width: 320px;
+  min-width: 360px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 

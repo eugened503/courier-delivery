@@ -1,47 +1,150 @@
 <template>
   <header class="header">
-    <nav>
-      <ul class="header-menu">
-        <li class="header-menu__item">Правила</li>
-        <li class="header-menu__item">Тарифы</li>
-        <li class="header-menu__item">Контакты</li>
-      </ul>
-    </nav>
-
-    <a href="/" class="header__logo-link">
-      <img src="../assets/images/logo.svg" alt="logo" />
-    </a>
-
-    <div class="contacts">
-      <div class="contacts__connection">
-        <a href="tel:+7 499 408 47 70">+7 499 408 47 70</a>
-        <span class="header__connection-item">ежедневно с 08:00 до 20:00</span>
-      </div>
-      <div class="contacts__messengers">
-        <ul class="contacts__list">
-          <li class="contacts__list-item">
-            <a href="https://wa.me/74994084770" target="_blank">
-              <img src="../assets/images/wa.svg" alt="wa-logo" />
-            </a>
-          </li>
-          <li class="contacts__list-item">
-            <a href="https://t.me/dostaver" target="_blank">
-              <img src="../assets/images/tg.svg" alt="tg-logo" />
-            </a>
-          </li>
-        </ul>
-      </div>
+    <Menu class="menu-desktop" />
+    <Menu
+      class="dropdown"
+      :class="{ 'dropdown-after': menuOpen }"
+      @menu-close="toggleMenu"
+    />
+    <div class="header__logo">
+      <a href="/" class="header__logo-link">
+        <img src="../assets/images/logo.svg" alt="logo" />
+      </a>
+      <button class="header__burger-btn" type="button" @click="toggleMenu">
+        <img src="../assets/images/burger-img.svg" alt="burger-btn" />
+      </button>
     </div>
+    <Contacts class="header-contacts" />
   </header>
 </template>
 
 <script>
+import Contacts from "@/components/Contacts.vue";
+import Menu from "@/components/Menu.vue";
 export default {
   name: "HeaderView",
+  components: { Contacts, Menu },
+  data() {
+    return {
+      menuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $laptop-big) {
+    width: 900px;
+  }
+
+  @media screen and (max-width: $laptop-small) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  @media screen and (max-width: $mobile-middle) {
+    padding: 0 29px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 122.68px;
+    background: $color-white;
+    border-radius: 0px 0px 43px 43px;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: $mobile-middle) {
+      padding: 0 33px;
+      height: 70px;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-desktop {
+    @media screen and (max-width: $laptop-small) {
+      display: none;
+    }
+  }
+
+  &__burger-btn {
+    display: none;
+    @media screen and (max-width: $laptop-small) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 20px;
+    }
+  }
+
+  .header-contacts {
+    margin: 18px 0 0;
+  }
+
+  .dropdown {
+    display: none;
+    @media screen and (max-width: $laptop-small) {
+      position: fixed;
+      top: -266px;
+      left: 0;
+      right: 0;
+      transition: transform 0.5s ease;
+      display: block;
+      padding: 40px 40px 0 54px;
+      background: rgba(76, 0, 133, 0.97);
+    }
+    .menu {
+      //margin: 0 0 0 54px;
+      font-size: 24px;
+      line-height: 64px;
+      @media screen and (max-width: $laptop-small) {
+        display: block;
+      }
+
+      &__item {
+        margin: 0;
+      }
+    }
+  }
+
+  .dropdown-after {
+    transform: translate(0, 266px);
+    height: 100vh;
+    .close-btn {
+      display: block;
+      //margin: 40px 40px 0 auto;
+      margin: 0 0 0 auto;
+    }
+  }
 }
 </style>
