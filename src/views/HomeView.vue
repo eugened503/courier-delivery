@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Header />
-    <!-- <Banner />
-    <Price />
+    <Banner />
+    <!-- <Price />
     <Organization />
     <Money />
     <Status />
@@ -14,7 +14,7 @@
 
 <script>
 import Header from "@/components/Header.vue";
-// import Banner from "@/components/Banner.vue";
+import Banner from "@/components/Banner.vue";
 // import Price from "@/components/Price.vue";
 // import Organization from "@/components/Organization.vue";
 // import Money from "@/components/Money.vue";
@@ -27,7 +27,7 @@ export default {
   name: "HomeView",
   components: {
     Header,
-    // Banner,
+    Banner,
     // Price,
     // Organization,
     // Money,
