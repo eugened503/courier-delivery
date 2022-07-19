@@ -193,7 +193,7 @@ export default {
     display: none;
     @media screen and (max-width: $laptop-small) {
       display: block;
-      margin: 0 0 0 auto;
+      margin: -123px 0 0 auto;
     }
   }
 }
