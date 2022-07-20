@@ -34,6 +34,17 @@ export default {
       this.menuOpen = !this.menuOpen;
     },
   },
+
+  watch: {
+    menuOpen() {
+      if (this.menuOpen) {
+        document.body.style.overflow = "hidden";
+        return;
+      }
+
+      document.body.style.overflow = "auto";
+    },
+  },
 };
 </script>
 
@@ -115,6 +126,7 @@ export default {
     display: none;
     @media screen and (max-width: $laptop-small) {
       position: fixed;
+      z-index: 3;
       top: -266px;
       left: 0;
       right: 0;
