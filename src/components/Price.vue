@@ -1,9 +1,7 @@
 <template>
   <section class="price">
-    <h2 class="price__title">Стоимость курьерских услуг</h2>
-    <p class="price__subtitle">
-      Вес и стоимость в таблице указаны для одной доставки
-    </p>
+    <h2 class="title">Стоимость курьерских услуг</h2>
+    <p class="subtitle">Вес и стоимость в таблице указаны для одной доставки</p>
     <div class="table-wrapper">
       <img
         class="table-wrapper__image"
@@ -81,6 +79,7 @@
         src="../assets/images/right-img.svg"
         alt=""
       />
+      <img class="table-wrapper__auto" src="../assets/images/auto.svg" alt="" />
     </div>
   </section>
 </template>
@@ -93,13 +92,8 @@ export default {
 
 <style lang="scss">
 .price {
-  &__title {
-    text-align: center;
-  }
+  margin: 101px 0 0;
 
-  &__subtitle {
-    text-align: center;
-  }
   .table-wrapper {
     position: relative;
     overflow: hidden;
@@ -113,9 +107,20 @@ export default {
     background-image: url("../assets/images/price-bg.svg");
     min-height: 620px;
 
+    @media screen and (max-width: $laptop-small) {
+      margin: 31px 0 0;
+      align-items: center;
+      flex-direction: column;
+      background-image: none;
+    }
+
     &__image {
       position: absolute;
       z-index: 1;
+
+      @media screen and (max-width: $laptop-small) {
+        display: none;
+      }
 
       &:first-child {
         top: 380px;
@@ -127,10 +132,27 @@ export default {
         transform: translateX(556px);
       }
     }
+
+    &__auto {
+      display: none;
+
+      @media screen and (max-width: $laptop-small) {
+        display: block;
+        margin: 54px 0 0;
+      }
+    }
   }
 
   .table {
     z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+
+    @media screen and (max-width: $laptop-small) {
+      font-size: 14px;
+      line-height: 15px;
+    }
 
     &__row {
       display: flex;
@@ -144,10 +166,25 @@ export default {
       border: 1px solid $color-white;
       background: $color-purple;
 
+      @media screen and (max-width: $laptop-small) {
+        padding: 12px 0;
+        width: 87px;
+      }
+
+      @media screen and (max-width: $tablet) {
+        padding: 21px 0;
+        width: 51px;
+      }
+
       &:first-child {
         width: 261px;
         padding: 22px 0 22px 42px;
         text-align: left;
+
+        @media screen and (max-width: $laptop-small) {
+          padding: 7px 12px;
+          width: 90px;
+        }
       }
     }
 

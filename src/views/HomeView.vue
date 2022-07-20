@@ -2,8 +2,8 @@
   <div class="home">
     <Header />
     <Banner />
-    <!-- <Price />
-    <Organization />
+    <Price />
+    <!-- <Organization />
     <Money />
     <Status />
     <About />
@@ -15,7 +15,7 @@
 <script>
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
-// import Price from "@/components/Price.vue";
+import Price from "@/components/Price.vue";
 // import Organization from "@/components/Organization.vue";
 // import Money from "@/components/Money.vue";
 // import Status from "@/components/Status.vue";
@@ -28,7 +28,7 @@ export default {
   components: {
     Header,
     Banner,
-    // Price,
+    Price,
     // Organization,
     // Money,
     // Status,

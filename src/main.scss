@@ -30,8 +30,35 @@ label {
   cursor: pointer;
 }
 
-input:focus, input:active,
-button:focus, button:active {
-    outline: none;
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
 }
 
+.title {
+  margin: 0 30px;
+  font-family: "MuseoSansCyrl-500";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 46px;
+  line-height: 55px;
+  text-align: center;
+
+  @media screen and (max-width: $laptop-small) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.subtitle {
+  margin: 25px 30px 0;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  @media screen and (max-width: $laptop-small) {
+   margin: 15px 30px 0;
+  }
+}
