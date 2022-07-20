@@ -4,7 +4,7 @@
     <p class="subtitle">Вес и стоимость в таблице указаны для одной доставки</p>
     <div class="table-wrapper">
       <img
-        class="table-wrapper__image"
+        class="table-wrapper__image first-child"
         src="../assets/images/left-img.svg"
         alt=""
       />
@@ -75,7 +75,7 @@
         </div>
       </div>
       <img
-        class="table-wrapper__image"
+        class="table-wrapper__image last-child"
         src="../assets/images/right-img.svg"
         alt=""
       />
@@ -121,16 +121,16 @@ export default {
       @media screen and (max-width: $laptop-small) {
         display: none;
       }
+    }
 
-      &:first-child {
-        top: 380px;
-        transform: translateX(-581px);
-      }
+    .first-child {
+      top: 380px;
+      transform: translateX(-581px);
+    }
 
-      &:last-child {
-        top: 64px;
-        transform: translateX(556px);
-      }
+    .last-child {
+      top: 64px;
+      transform: translateX(556px);
     }
 
     &__auto {

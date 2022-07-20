@@ -3,8 +3,8 @@
     <Header />
     <Banner />
     <Price />
-    <!-- <Organization />
-    <Money />
+    <Organization />
+    <!-- <Money />
     <Status />
     <About />
     <Application />
@@ -16,7 +16,7 @@
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
 import Price from "@/components/Price.vue";
-// import Organization from "@/components/Organization.vue";
+import Organization from "@/components/Organization.vue";
 // import Money from "@/components/Money.vue";
 // import Status from "@/components/Status.vue";
 // import About from "@/components/About.vue";
@@ -29,7 +29,7 @@ export default {
     Header,
     Banner,
     Price,
-    // Organization,
+    Organization,
     // Money,
     // Status,
     // About,
