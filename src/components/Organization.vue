@@ -116,6 +116,12 @@ export default {
     margin: 0 0 30px;
     padding: 50px 50px 43px;
 
+    &:last-child {
+      @media screen and (max-width: $laptop-big) {
+        margin: 0;
+      }
+    }
+
     @media screen and (max-width: $laptop-big) {
       width: 100%;
     }
@@ -199,7 +205,7 @@ export default {
     padding-bottom: 5px;
 
     @media screen and (max-width: $tablet) {
-      margin: 0 auto;
+      margin: 22px auto 0;
     }
   }
 }

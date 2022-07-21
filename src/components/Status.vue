@@ -81,6 +81,12 @@ export default {
         margin: 0 0 18px;
       }
 
+      &:last-child {
+        @media screen and (max-width: $laptop-big) {
+          margin: 0;
+        }
+      }
+
       &__image {
         display: block;
         margin: 0 auto;
