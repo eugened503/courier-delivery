@@ -1,13 +1,14 @@
 <template>
   <section class="status">
-    <h2 class="status__title">Организация процессов без лишней бюрократии</h2>
-    <p class="status__desc">
+    <h2 class="title">Организация процессов без лишней бюрократии</h2>
+    <p class="subtitle">
       Вашим менеджерам не придётся заниматься дополнительной работой и отвечать
       всем <br />
-      клиентам, когда они получат свои посылки. Информирование мы полностью
-      берём на себя. <br />Связываемся с вами только в случае необходимости,
-      если клиент не выходит на связь
+      клиентам, когда они получат свои посылки.
+      <span>Информирование мы полностью берём на себя.</span> <br />Связываемся
+      с вами только в случае необходимости, если клиент не выходит на связь
     </p>
+
     <div class="status-items">
       <div class="status-item" v-for="(item, index) in items" :key="index">
         <img class="status-item__image" :src="item.image" alt="handset" />
@@ -49,10 +50,57 @@ export default {
 
 <style lang="scss">
 .status {
-  min-height: 478px;
+  margin: 103px 0 0;
+  //min-height: 478px;
+  min-height: 526px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-image: url("../assets/images/status-bg.svg");
+
+  @media screen and (max-width: $laptop-big) {
+    background-image: none;
+  }
+
+  .status-items {
+    max-width: 1233px;
+    padding: 0 30px;
+    margin: 44px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .status-item {
+      padding: 53px 27px 43px;
+      border: 2px solid $color-white;
+      width: 370px;
+      border-radius: 38px;
+
+      @media screen and (max-width: $laptop-big) {
+        width: 100%;
+        margin: 0 0 18px;
+      }
+
+      &__image {
+        display: block;
+        margin: 0 auto;
+      }
+
+      &__title {
+        margin: 30px 0 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      &__desc {
+        margin: 24px 0 0;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+      }
+    }
+  }
 }
 </style>

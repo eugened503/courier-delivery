@@ -97,10 +97,6 @@ export default {
         padding: 28px;
       }
     }
-
-    .subtitle span {
-      font-weight: 600;
-    }
   }
 
   &__image {
