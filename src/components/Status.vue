@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "StatusView",
+  name: "StatusBlock",
   data() {
     return {
       items: [

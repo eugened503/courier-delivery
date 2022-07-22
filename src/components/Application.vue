@@ -1,5 +1,5 @@
 <template>
-  <section class="application">
+  <section class="application" id="application">
     <h2 class="title">
       Отправляйте заявку, чтобы обсудить <br />
       условия сотрудничества
@@ -15,7 +15,7 @@
 <script>
 import Form from "@/components/Form.vue";
 export default {
-  name: "ApplicationView",
+  name: "ApplicationBlock",
   components: { Form },
 };
 </script>

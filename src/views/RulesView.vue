@@ -1,16 +1,13 @@
 <template>
-  <section class="organization">
-    <h2 class="title">Организация процессов без лишней бюрократии</h2>
-    <h3 class="subtitle">Быстро. Удобно. Понятно</h3>
+  <div>
     <Cards :items="items" />
-    <router-link class="organization__link" to="/rules/">Подробнее</router-link>
-  </section>
+  </div>
 </template>
 
 <script>
 import Cards from "@/components/Cards.vue";
 export default {
-  name: "OrganizationBlock",
+  name: "RulesView",
   components: {
     Cards,
   },
@@ -42,29 +39,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.organization {
-  margin: 130px 0 0;
-
-  @media screen and (max-width: $tablet) {
-    margin: 38px 0 0;
-  }
-
-  &__link {
-    display: block;
-    margin: 21px auto 0;
-    max-width: 88px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: $color-white;
-    border-bottom: 1px dashed #fff;
-    padding-bottom: 5px;
-
-    @media screen and (max-width: $tablet) {
-      margin: 22px auto 0;
-    }
-  }
-}
-</style>

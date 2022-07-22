@@ -44,7 +44,7 @@
 <script>
 import Form from "@/components/Form.vue";
 export default {
-  name: "OrganizationView",
+  name: "MoneyBlock",
   components: { Form },
   data() {
     return {

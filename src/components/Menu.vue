@@ -5,13 +5,13 @@
     </button>
     <ul class="menu">
       <li class="menu__item">
-        <a class="menu__link" href="#">Правила</a>
+        <router-link class="menu__link" to="/rules">Правила</router-link>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="#">Тарифы</a>
+        <a class="menu__link" href="/#price">Тарифы</a>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="#">Контакты</a>
+        <a class="menu__link" href="/#application">Контакты</a>
       </li>
     </ul>
   </nav>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "MenuView",
+  name: "MenuBlock",
   methods: {
     menuClose() {
       this.$emit("menu-close");

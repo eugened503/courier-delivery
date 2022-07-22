@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "ContactsView",
+  name: "ContactsBlock",
 };
 </script>
 

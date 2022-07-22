@@ -33,7 +33,7 @@
 <script>
 import Form from "@/components/Form.vue";
 export default {
-  name: "BannerView",
+  name: "BannerBlock",
   components: { Form },
 };
 </script>

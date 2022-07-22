@@ -7,9 +7,9 @@
       @menu-close="toggleMenu"
     />
     <div class="header__logo">
-      <a href="/" class="header__logo-link">
+      <router-link to="/" class="header__logo-link">
         <img src="../assets/images/logo.svg" alt="logo" />
-      </a>
+      </router-link>
       <button class="header__burger-btn" type="button" @click="toggleMenu">
         <img src="../assets/images/burger-img.svg" alt="burger-btn" />
       </button>
@@ -22,7 +22,7 @@
 import Contacts from "@/components/Contacts.vue";
 import Menu from "@/components/Menu.vue";
 export default {
-  name: "HeaderView",
+  name: "HeaderBlock",
   components: { Contacts, Menu },
   data() {
     return {

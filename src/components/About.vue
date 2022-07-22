@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: "StatusView",
+  name: "AboutBlock",
 };
 </script>
 

@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "FormView",
+  name: "FormBlock",
   props: {
     text: {
       type: String,

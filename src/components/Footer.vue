@@ -1,23 +1,23 @@
 <template>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo" href="/">
+      <router-link class="footer__logo" to="/">
         <img src="../assets/images/f-logo.svg" alt="logo" />
-      </a>
+      </router-link>
       <div class="tax-report">
         <span class="tax-report__text">ИП Каткаев Владислав Наранович</span>
         <span class="tax-report__text">ИНН 372003215258</span>
       </div>
       <ul class="footer-links">
         <li class="footer-links__item">
-          <a href="/rules/" class="footer-links__link"
-            >Политика конфиденциальности</a
-          >
+          <router-link to="/privacy-policy" class="footer-links__link">
+            Политика конфиденциальности
+          </router-link>
         </li>
         <li class="footer-links__item">
-          <a href="/privacy-policy/" class="footer-links__link">
+          <router-link to="/rules" class="footer-links__link">
             Полные правила
-          </a>
+          </router-link>
         </li>
       </ul>
       <Contacts />
@@ -28,7 +28,7 @@
 <script>
 import Contacts from "@/components/Contacts.vue";
 export default {
-  name: "FooterView",
+  name: "FooterBlock",
   components: { Contacts },
 };
 </script>

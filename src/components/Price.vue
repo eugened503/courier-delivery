@@ -1,5 +1,5 @@
 <template>
-  <section class="price">
+  <section class="price" id="price">
     <h2 class="title">Стоимость курьерских услуг</h2>
     <p class="subtitle">Вес и стоимость в таблице указаны для одной доставки</p>
     <div class="table-wrapper">
@@ -86,7 +86,7 @@
 
 <script>
 export default {
-  name: "PriceView",
+  name: "PriceBlock",
 };
 </script>
 
