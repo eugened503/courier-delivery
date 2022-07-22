@@ -135,7 +135,7 @@ export default {
 
     .title {
       margin: 0;
-      color: $color-purple;
+      color: $color-dark-purple;
     }
     .important-cards {
       display: flex;
