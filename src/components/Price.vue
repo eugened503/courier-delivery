@@ -94,6 +94,10 @@ export default {
 .price {
   margin: 101px 0 0;
 
+  @media screen and (max-width: $tablet) {
+    margin: 37px 0 0;
+  }
+
   .table-wrapper {
     position: relative;
     overflow: hidden;
@@ -102,8 +106,9 @@ export default {
     align-items: flex-start;
     margin: 67px 0 0;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: 50% 195%;
+    //background-position: center center;
+    //background-size: cover;
     background-image: url("../assets/images/price-bg.svg");
     min-height: 620px;
 

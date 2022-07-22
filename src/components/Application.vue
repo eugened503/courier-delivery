@@ -23,12 +23,26 @@ export default {
 <style lang="scss">
 .application {
   margin: 110px 0 0;
-  padding: 0 32px;
-  min-height: 426px;
+  padding: 0 32px 94px;
+  //min-height: 426px;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  //background-position: center center;
+  background-position: 50% 112%;
+  //background-size: cover;
   background-image: url("../assets/images/a-bg.svg");
+
+  @media screen and (max-width: $laptop-small) {
+    padding: 0 32px 54px;
+    background-image: none;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin: 27px 0 0;
+  }
+
+  .title {
+    margin: 0 15px;
+  }
 
   .form {
     &__input-wrapper {

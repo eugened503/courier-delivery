@@ -71,6 +71,10 @@ export default {
   margin: 118px auto 0;
   max-width: 1173px;
 
+  @media screen and (max-width: $tablet) {
+    margin: 35px auto 0;
+  }
+
   &__bg-image {
     position: absolute;
 
@@ -115,6 +119,8 @@ export default {
 
       @media screen and (max-width: $laptop-big) {
         position: static;
+        width: 292px;
+        height: 292px;
       }
     }
 

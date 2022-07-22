@@ -62,6 +62,10 @@ export default {
     background-image: none;
   }
 
+  @media screen and (max-width: $tablet) {
+    margin: 35px 0 0;
+  }
+
   .status-items {
     max-width: 1233px;
     padding: 0 30px;

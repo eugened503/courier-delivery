@@ -74,6 +74,10 @@ export default {
 .money {
   margin: 107px 0 0;
 
+  @media screen and (max-width: $tablet) {
+    margin: 42px 0 0;
+  }
+
   &__info-wrapper {
     //min-height: 1014px;
     padding: 0 32px 132px;

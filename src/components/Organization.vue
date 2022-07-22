@@ -76,6 +76,10 @@ export default {
     margin: 63px 0 0;
     padding: 0 31px;
 
+    @media screen and (max-width: $tablet) {
+      margin: 23px 0 0;
+    }
+
     &__image {
       position: absolute;
       z-index: 1;

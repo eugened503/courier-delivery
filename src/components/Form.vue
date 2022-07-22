@@ -56,6 +56,7 @@ export default {
 
     @media screen and (max-width: $tablet) {
       width: 100%;
+      margin: 0;
     }
 
     &::placeholder {

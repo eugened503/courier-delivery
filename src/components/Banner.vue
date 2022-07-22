@@ -53,6 +53,10 @@ export default {
     background-image: none;
   }
 
+  @media screen and (max-width: $tablet) {
+    margin: 24px 0 0;
+  }
+
   &__info {
     width: 100%;
     text-align: center;
