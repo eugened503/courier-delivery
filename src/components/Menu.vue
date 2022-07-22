@@ -5,7 +5,9 @@
     </button>
     <ul class="menu">
       <li class="menu__item">
-        <router-link class="menu__link" to="/rules">Правила</router-link>
+        <router-link class="menu__link" to="/" v-scroll-to="'#organization'">
+          Правила
+        </router-link>
       </li>
       <li class="menu__item">
         <router-link class="menu__link" to="/" v-scroll-to="'#price'">

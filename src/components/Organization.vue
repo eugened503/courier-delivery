@@ -1,5 +1,5 @@
 <template>
-  <section class="organization">
+  <section class="organization" id="organization">
     <h2 class="title">Организация процессов без лишней бюрократии</h2>
     <h3 class="subtitle">Быстро. Удобно. Понятно</h3>
     <Cards :items="items" />

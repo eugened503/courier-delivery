@@ -11,7 +11,7 @@
           <div class="card__circle">
             {{ item.step }}
           </div>
-          <h4 class="card__title" v-html="item.title" />
+          <h4 class="card__title" v-if="item.title" v-html="item.title" />
         </div>
         <p class="card__desc" v-html="item.desc" />
       </article>
