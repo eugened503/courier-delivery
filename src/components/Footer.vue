@@ -1,14 +1,14 @@
 <template>
   <footer class="footer">
-    <a class="footer__logo" href="/">
-      <img src="../assets/images/f-logo.svg" alt="logo" />
-    </a>
-    <div class="tax-report">
-      <span class="tax-report__text">ИП Каткаев Владислав Наранович</span>
-      <span class="tax-report__text">ИНН 372003215258</span>
-    </div>
-    <div class="footer-links">
-      <ul class="footer-links__list">
+    <div class="footer__wrapper">
+      <a class="footer__logo" href="/">
+        <img src="../assets/images/f-logo.svg" alt="logo" />
+      </a>
+      <div class="tax-report">
+        <span class="tax-report__text">ИП Каткаев Владислав Наранович</span>
+        <span class="tax-report__text">ИНН 372003215258</span>
+      </div>
+      <ul class="footer-links">
         <li class="footer-links__item">
           <a href="/rules/" class="footer-links__link"
             >Политика конфиденциальности</a
@@ -20,8 +20,8 @@
           </a>
         </li>
       </ul>
+      <Contacts />
     </div>
-    <Contacts />
   </footer>
 </template>
 
@@ -35,5 +35,74 @@ export default {
 
 <style lang="scss">
 .footer {
+  background: $color-white;
+  padding: 48px 0 56px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1173px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $laptop-big) {
+      max-width: 900px;
+    }
+
+    @media screen and (max-width: $laptop-small) {
+      max-width: 600px;
+      flex-direction: column;
+    }
+
+    .tax-report {
+      font-size: 15px;
+      line-height: 24px;
+      opacity: 0.45;
+
+      @media screen and (max-width: $laptop-small) {
+        text-align: center;
+      }
+
+      &__text {
+        display: block;
+        color: #4c0085;
+      }
+    }
+
+    .footer-links {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 30px;
+
+      @media screen and (max-width: $laptop-small) {
+        margin: 30px 0 0;
+      }
+
+      @media screen and (max-width: $laptop-small) {
+        text-align: center;
+        order: 4;
+      }
+
+      &__link {
+        border-bottom: 1px dashed #4c0085;
+        color: #4c0085;
+        padding-bottom: 5px;
+      }
+    }
+
+    .contacts {
+      @media screen and (max-width: $laptop-big) {
+        margin: 20px 0 0;
+      }
+      &__link {
+        color: #4c0085;
+      }
+
+      &__connection-item {
+        color: #4c0085;
+      }
+    }
+  }
 }
 </style>
