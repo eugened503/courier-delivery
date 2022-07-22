@@ -5,17 +5,32 @@
     </button>
     <ul class="menu">
       <li class="menu__item">
-        <router-link class="menu__link" to="/" v-scroll-to="'#organization'">
+        <router-link
+          class="menu__link"
+          to="/"
+          v-scroll-to="'#organization'"
+          @click="menuClose"
+        >
           Правила
         </router-link>
       </li>
       <li class="menu__item">
-        <router-link class="menu__link" to="/" v-scroll-to="'#price'">
+        <router-link
+          class="menu__link"
+          to="/"
+          v-scroll-to="'#price'"
+          @click="menuClose"
+        >
           Тарифы
         </router-link>
       </li>
       <li class="menu__item">
-        <router-link class="menu__link" to="/" v-scroll-to="'#application'">
+        <router-link
+          class="menu__link"
+          to="/"
+          v-scroll-to="'#application'"
+          @click="menuClose"
+        >
           Контакты
         </router-link>
       </li>
