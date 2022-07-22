@@ -66,7 +66,7 @@ export default {
 
       &__text {
         display: block;
-        color: #4c0085;
+        color: $color-dark-purple;
       }
     }
 
@@ -85,8 +85,8 @@ export default {
       }
 
       &__link {
-        border-bottom: 1px dashed #4c0085;
-        color: #4c0085;
+        border-bottom: 1px dashed $color-dark-purple;
+        color: $color-dark-purple;
         padding-bottom: 5px;
       }
     }
@@ -96,11 +96,11 @@ export default {
         margin: 20px 0 0;
       }
       &__link {
-        color: #4c0085;
+        color: $color-dark-purple;
       }
 
       &__connection-item {
-        color: #4c0085;
+        color: $color-dark-purple;
       }
     }
   }

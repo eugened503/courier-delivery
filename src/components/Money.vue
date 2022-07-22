@@ -180,7 +180,7 @@ export default {
         line-height: 28px;
         text-align: center;
         margin-top: 30px;
-        color: #4c0085;
+        color: $color-dark-purple;
 
         span {
           font-weight: 700;

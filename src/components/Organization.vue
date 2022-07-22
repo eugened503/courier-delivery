@@ -191,7 +191,7 @@ export default {
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
-      border-bottom: 1px dashed #4c0085;
+      border-bottom: 1px dashed $color-dark-purple;
       color: inherit;
       padding-bottom: 5px;
     }

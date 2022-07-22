@@ -145,14 +145,14 @@ export default {
         font-weight: 600;
         font-size: 40px;
         line-height: 24px;
-        color: #4c0085;
+        color: $color-dark-purple;
       }
 
       &__desc {
         margin: 27px 0 0;
         font-size: 18px;
         line-height: 28px;
-        color: #4c0085;
+        color: $color-dark-purple;
       }
 
       .desc-margin {
@@ -168,12 +168,11 @@ export default {
       &__link {
         display: block;
         margin: 20px auto 0;
-        color: #4c0085;
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
-        border-bottom: 1px dashed #4c0085;
-        color: #4c0085;
+        border-bottom: 1px dashed $color-dark-purple;
+        color: $color-dark-purple;
         padding-bottom: 5px;
       }
     }
