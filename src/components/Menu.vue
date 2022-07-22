@@ -8,10 +8,14 @@
         <router-link class="menu__link" to="/rules">Правила</router-link>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="/#price">Тарифы</a>
+        <router-link class="menu__link" to="/" v-scroll-to="'#price'">
+          Тарифы
+        </router-link>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="/#application">Контакты</a>
+        <router-link class="menu__link" to="/" v-scroll-to="'#application'">
+          Контакты
+        </router-link>
       </li>
     </ul>
   </nav>
