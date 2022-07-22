@@ -7,8 +7,8 @@
     <Money />
     <Status />
     <About />
-    <!-- <Application />
-    <Footer /> -->
+    <Application />
+    <!-- <Footer /> -->
   </div>
 </template>
 
@@ -20,7 +20,7 @@ import Organization from "@/components/Organization.vue";
 import Money from "@/components/Money.vue";
 import Status from "@/components/Status.vue";
 import About from "@/components/About.vue";
-// import Application from "@/components/Application.vue";
+import Application from "@/components/Application.vue";
 // import Footer from "@/components/Footer.vue";
 
 export default {
@@ -33,7 +33,7 @@ export default {
     Money,
     Status,
     About,
-    // Application,
+    Application,
     // Footer,
   },
 };
