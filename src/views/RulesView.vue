@@ -2,23 +2,25 @@
   <div class="rules">
     <h2 class="rules__title">Полные правила</h2>
     <div class="rules__process">
-      <img
-        class="rules__img"
-        src="../assets/images/courier.svg"
-        alt="courier"
-      />
+      <img class="rules__img" src="../assets/images/courier.svg" alt="" />
       <p class="rules__desc">Процесс доставки</p>
     </div>
     <Cards :items="items" />
+    <Pack />
+    <InformationTransfer />
   </div>
 </template>
 
 <script>
 import Cards from "@/components/Cards.vue";
+import Pack from "@/components/Pack.vue";
+import InformationTransfer from "@/components/InformationTransfer.vue";
 export default {
   name: "RulesView",
   components: {
     Cards,
+    Pack,
+    InformationTransfer,
   },
   data() {
     return {
