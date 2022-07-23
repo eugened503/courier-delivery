@@ -1,26 +1,24 @@
 <template>
   <div class="rules">
     <h2 class="rules__title">Полные правила</h2>
-    <div class="rules__process">
-      <img class="rules__img" src="../assets/images/courier.svg" alt="" />
-      <p class="rules__desc">Процесс доставки</p>
-    </div>
+    <img class="rules__img" src="../assets/images/courier.svg" alt="" />
+    <p class="rules__desc">Процесс доставки</p>
     <Cards :items="items" />
-    <Pack />
-    <InformationTransfer />
+    <!-- <Pack />
+    <InformationTransfer /> -->
   </div>
 </template>
 
 <script>
 import Cards from "@/components/Cards.vue";
-import Pack from "@/components/Pack.vue";
-import InformationTransfer from "@/components/InformationTransfer.vue";
+//import Pack from "@/components/Pack.vue";
+//import InformationTransfer from "@/components/InformationTransfer.vue";
 export default {
   name: "RulesView",
   components: {
     Cards,
-    Pack,
-    InformationTransfer,
+    //Pack,
+    //InformationTransfer,
   },
   data() {
     return {
@@ -68,41 +66,141 @@ export default {
 
 <style lang="scss">
 .rules {
+  margin: 93px 0 0;
+
+  @media screen and (max-width: $laptop-small) {
+    margin: 36px 0 0;
+  }
+
+  &__title {
+    font-family: "MuseoSansCyrl-500";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 46px;
+    line-height: 66px;
+
+    @media screen and (max-width: $laptop-small) {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 62px auto 0;
+
+    @media screen and (max-width: $laptop-small) {
+      margin: 30px auto 0;
+    }
+  }
+
+  &__desc {
+    margin: 18px 0 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    @media screen and (max-width: $laptop-small) {
+      margin: 13px 0 0;
+    }
+  }
+
+  .card-wrapper {
+    &__image {
+      &:first-child {
+        top: auto;
+        bottom: 416px;
+        left: 0;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 416px;
+        right: 0;
+      }
+    }
+  }
+
   .cards {
     display: block;
     width: 1170px;
     max-width: none;
 
+    @media screen and (max-width: $laptop-small) {
+      width: 600px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
+
     .card {
       width: 600px;
       margin: 0 auto 30px;
 
+      @media screen and (max-width: $laptop-small) {
+        width: 100%;
+      }
+
       &:first-child {
         margin: 0 auto 30px 0;
+
+        @media screen and (max-width: $laptop-small) {
+          margin: 0 auto 20px;
+        }
       }
 
       &:nth-child(2) {
         margin: 0 0 30px auto;
+
+        @media screen and (max-width: $laptop-small) {
+          margin: 0 auto 20px;
+        }
       }
 
       &:nth-child(3) {
         width: 640px;
+
+        @media screen and (max-width: $laptop-small) {
+          width: 100%;
+          margin: 0 auto 20px;
+        }
       }
 
       &:nth-child(n + 4):nth-child(even) {
         margin: 0 auto 30px 0;
+
+        @media screen and (max-width: $laptop-small) {
+          margin: 0 auto 20px;
+        }
       }
 
       &:nth-child(n + 5):nth-child(odd) {
         margin: 0 0 30px auto;
+
+        @media screen and (max-width: $laptop-small) {
+          margin: 0 auto 20px;
+        }
       }
 
       &__step {
         float: left;
+
+        @media screen and (max-width: $tablet) {
+          float: none;
+        }
       }
 
       &__desc {
         margin: 0;
+
+        @media screen and (max-width: $tablet) {
+          margin: 18px 0 0;
+        }
       }
     }
   }

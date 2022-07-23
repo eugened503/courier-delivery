@@ -55,6 +55,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   max-width: 1170px;
+  min-width: 360px;
   margin: 0 auto;
 
   @media screen and (max-width: $laptop-big) {

@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss">
 .footer {
+  min-width: 360px;
   background: $color-white;
   padding: 48px 0 56px 0;
 
