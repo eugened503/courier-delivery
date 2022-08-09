@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <!-- <div class="revenue-report">
+    <div class="revenue-report">
       <div class="revenue-report-item">
         <img
           class="revenue-report-item__image"
@@ -50,7 +50,7 @@
           пример отчёта
         </a>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -64,7 +64,7 @@ export default {
 .information-transfer {
   min-height: 926px;
   margin: 78px 0 0;
-  padding: 0 30px;
+  padding: 0 30px 57px;
   background-image: url(../assets/images/information-transfer-bg.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -138,6 +138,73 @@ export default {
       &:last-child {
         border-radius: 0 0 38px 38px;
       }
+    }
+  }
+}
+
+.information-transfer .revenue-report {
+  display: flex;
+  justify-content: space-between;
+  margin: 81px auto 0;
+  max-width: 1173px;
+
+  @media screen and (max-width: $laptop-small) {
+    display: block;
+    margin: 62px auto 0;
+    max-width: 600px;
+  }
+
+  .revenue-report-item {
+    width: calc(50% - 42.5px);
+
+    @media screen and (max-width: $laptop-small) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &:last-child {
+      @media screen and (max-width: $laptop-small) {
+        margin: 53px auto 0;
+      }
+    }
+
+    &__image {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin: 29px 0 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 30px;
+
+      @media screen and (max-width: $laptop-small) {
+        font-size: 24px;
+      }
+    }
+
+    &__desc {
+      margin: 32px 0 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &__link {
+      display: block;
+      margin: 24px auto 0;
+      width: 119px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      border-bottom: 1px dashed #fff;
+      padding-bottom: 5px;
     }
   }
 }
