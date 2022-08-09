@@ -412,3 +412,59 @@ export default {
   name: "PrivacyPolicyView",
 };
 </script>
+
+<style lang="scss">
+.privacy-policy {
+  margin: 63px 0 0;
+  padding: 0 30px 131px;
+
+  @media screen and (max-width: $laptop-small) {
+    margin: 31px 0 0;
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 66px;
+    text-align: center;
+
+    @media screen and (max-width: $laptop-small) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__content {
+    max-width: 1173px;
+    margin: 0 auto;
+
+    h2,
+    p {
+      margin: 24px 0 0;
+
+      @media screen and (max-width: $tablet) {
+        margin: 17px 0 0;
+      }
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 24px;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 21px;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+</style>
