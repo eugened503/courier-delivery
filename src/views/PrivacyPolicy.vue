@@ -422,6 +422,10 @@ export default {
     margin: 31px 0 0;
   }
 
+  @media screen and (max-width: $tablet) {
+    padding: 0 30px 60px;
+  }
+
   &__title {
     font-size: 46px;
     line-height: 66px;
