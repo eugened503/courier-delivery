@@ -5,6 +5,7 @@
         type="text"
         class="form__input"
         placeholder="Введите номер телефона"
+        v-maska="'+7(###)###-##-##'"
       />
 
       <button type="button" class="form__button">{{ text }}</button>
