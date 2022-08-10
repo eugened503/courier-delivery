@@ -6,12 +6,21 @@
         class="form__input"
         placeholder="Введите номер телефона"
         v-maska="'+7(###)###-##-##'"
+        v-model="tel"
+        :class="{ error: v$.tel.$errors.length }"
       />
 
-      <button type="button" class="form__button">{{ text }}</button>
+      <button
+        type="button"
+        class="form__button"
+        :disabled="v$.$invalid"
+        @click="sendRequest"
+      >
+        {{ text }}
+      </button>
     </div>
     <label class="form__label">
-      <input type="checkbox" class="form__checkbox" checked="checked" />
+      <input type="checkbox" class="form__checkbox" v-model="check" />
       <span class="form__policy">
         Я согласен с
         <a class="form__link" href="/privacy-policy/"
@@ -19,18 +28,68 @@
         </a>
       </span>
     </label>
+    <div class="form__errors">
+      <div v-for="(error, index) of v$.check.$errors" :key="index">
+        <p>{{ error.$message }}</p>
+      </div>
+    </div>
   </form>
+  <modal :showModal="showModal" @close="showModal = false">
+    <template v-slot:header>
+      <h3>Карточка успешно добавлена!</h3>
+    </template>
+    <template v-slot:body>
+      <p>Поздравляем! Карточка успешно добавлена в общий список товаров! 🎉</p>
+    </template>
+  </modal>
 </template>
 
 <script>
+import Modal from "@/components/Modal.vue";
+import useVuelidate from "@vuelidate/core";
+import { required, helpers } from "@vuelidate/validators";
+import { mustBeAccepted } from "@/customValidators/mustBeAccepted.js";
 export default {
   name: "FormBlock",
+  components: { Modal },
+  setup() {
+    return { v$: useVuelidate() };
+  },
   props: {
     text: {
       type: String,
       required: false,
       default: "ПЕРЕЗВОНИТЕ МНЕ",
     },
+  },
+  data() {
+    return {
+      tel: null,
+      check: true,
+      showModal: false,
+    };
+  },
+  methods: {
+    sendRequest() {
+      this.tel = "";
+      this.v$.$reset();
+      setTimeout(() => (this.showModal = true), 500);
+    },
+  },
+  validations() {
+    return {
+      tel: {
+        required,
+        $autoDirty: true,
+      },
+      check: {
+        $autoDirty: true,
+        mustBeAccepted: helpers.withMessage(
+          "Поле является обязательным",
+          mustBeAccepted
+        ),
+      },
+    };
   },
 };
 </script>
@@ -50,7 +109,7 @@ export default {
     font-weight: 600;
     font-size: 15px;
     line-height: 30px;
-    border: none;
+    border: 1px solid transparent;
     color: $color-purple;
     background: $color-white;
     border-radius: 43px;
@@ -63,6 +122,12 @@ export default {
     &::placeholder {
       color: $color-purple;
       opacity: 0.45;
+    }
+
+    &.error {
+      border: 1px solid red;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fade-in 0.4s ease-in;
     }
   }
 
@@ -120,6 +185,25 @@ export default {
 
   &__link {
     border-bottom: 1px dashed $color-white;
+  }
+
+  &__errors {
+    margin: 4px auto 0;
+    min-height: 19px;
+    text-align: center;
+
+    p {
+      color: red;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
