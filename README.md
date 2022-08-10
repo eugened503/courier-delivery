@@ -1,4 +1,4 @@
-# community-scientists
+# courier-delivery
 
 ## Project setup
 ```
