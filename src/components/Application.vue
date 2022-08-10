@@ -24,11 +24,8 @@ export default {
 .application {
   margin: 110px 0 0;
   padding: 0 32px 94px;
-  //min-height: 426px;
   background-repeat: no-repeat;
-  //background-position: center center;
   background-position: 50% 112%;
-  //background-size: cover;
   background-image: url("../assets/images/a-bg.svg");
 
   @media screen and (max-width: $laptop-small) {

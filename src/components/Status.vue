@@ -51,7 +51,6 @@ export default {
 <style lang="scss">
 .status {
   margin: 103px 0 0;
-  //min-height: 478px;
   min-height: 526px;
   background-repeat: no-repeat;
   background-position: center center;

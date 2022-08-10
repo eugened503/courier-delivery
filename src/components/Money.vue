@@ -79,12 +79,7 @@ export default {
   }
 
   &__info-wrapper {
-    //min-height: 1014px;
     padding: 0 32px 132px;
-    //background-repeat: no-repeat;
-    //background-position: center center;
-    //background-size: contain;
-    //background-image: url("../assets/images/money-bg.svg");
 
     @media screen and (max-width: $tablet) {
       padding: 0 32px 48px;
@@ -113,13 +108,8 @@ export default {
     }
   }
   .important-wrapper {
-    //margin: 132px auto 0;
     margin: 0 auto;
     padding: 0 30px;
-
-    @media screen and (max-width: $tablet) {
-      //margin: 48px auto 0;
-    }
   }
 
   .important-information {

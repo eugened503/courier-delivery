@@ -107,8 +107,6 @@ export default {
     margin: 67px 0 0;
     background-repeat: no-repeat;
     background-position: 50% 195%;
-    //background-position: center center;
-    //background-size: cover;
     background-image: url("../assets/images/price-bg.svg");
     min-height: 620px;
 
