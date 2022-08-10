@@ -2,13 +2,12 @@
   <transition name="modal">
     <div class="modal-mask" v-if="showModal">
       <div class="modal">
-        <div class="modal__header">
-          <slot name="header"></slot>
-        </div>
-        <div class="modal__body">
-          <slot name="body"></slot>
-        </div>
-        <button class="modal__button" @click="$emit('close')">OK</button>
+        <button class="modal__button" @click="$emit('close')">
+          <img src="../assets/images/cross.svg" alt="" />
+        </button>
+        <img class="modal__image" src="../assets/images/heart.svg" alt="" />
+        <p class="modal__title">Спасибо за заявку!</p>
+        <p class="modal__subtitle">В ближайшее время мы свяжемся с вами</p>
       </div>
     </div>
   </transition>
@@ -37,36 +36,42 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal {
-  width: 300px;
-  padding: 20px 30px;
+  width: 570px;
+  padding: 38px 38px 136px;
   background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
-  &__header {
-    font-size: 20px;
-    line-height: 25px;
+  border-radius: 38px;
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
   }
-  &__body {
-    margin: 20px 0;
-    line-height: 20px;
-  }
+
   &__button {
-    width: 100%;
-    margin: 24px 0 0;
-    padding: 10px 92px 11px 96px;
-    background: green;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    color: $color-white;
-    transition: background 0.3s ease-in;
-    &:hover {
-      background: #54ac46;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 auto;
+    opacity: 0.15;
+  }
+
+  &__image {
+    display: block;
+    margin: 43px auto 0;
+  }
+
+  &__title {
+    margin: 28px 0 0;
+    font-family: "MuseoSansCyrl-500";
+    font-size: 36px;
+    line-height: 66px;
+    text-align: center;
+    color: $color-dark-purple;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-dark-purple;
   }
 }
 .modal-enter-active,

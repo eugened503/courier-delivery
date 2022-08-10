@@ -34,14 +34,7 @@
       </div>
     </div>
   </form>
-  <modal :showModal="showModal" @close="showModal = false">
-    <template v-slot:header>
-      <h3>Карточка успешно добавлена!</h3>
-    </template>
-    <template v-slot:body>
-      <p>Поздравляем! Карточка успешно добавлена в общий список товаров! 🎉</p>
-    </template>
-  </modal>
+  <modal :showModal="showModal" @close="showModal = false" />
 </template>
 
 <script>
