@@ -42,6 +42,7 @@ import Modal from "@/components/Modal.vue";
 import useVuelidate from "@vuelidate/core";
 import { required, helpers } from "@vuelidate/validators";
 import { mustBeAccepted } from "@/customValidators/mustBeAccepted.js";
+import { lengthCheck } from "@/customValidators/lengthCheck.js";
 export default {
   name: "FormBlock",
   components: { Modal },
@@ -74,6 +75,7 @@ export default {
       tel: {
         required,
         $autoDirty: true,
+        lengthCheck,
       },
       check: {
         $autoDirty: true,
