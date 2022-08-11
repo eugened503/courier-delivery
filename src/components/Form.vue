@@ -67,7 +67,18 @@ export default {
     sendRequest() {
       this.tel = "";
       this.v$.$reset();
-      setTimeout(() => (this.showModal = true), 500);
+      this.showModal = true;
+    },
+  },
+
+  watch: {
+    showModal() {
+      if (this.showModal) {
+        document.body.style.overflow = "hidden";
+        return;
+      }
+
+      document.body.style.overflow = "auto";
     },
   },
   validations() {
